@@ -85,9 +85,19 @@ Driftbarhet (Øyvind)
 Vedlikehold (Øyvind)
 ====================
 
-    * Vi vedlikeholder API'er, ikke applikasjoner
+    * Prosjekter varer ikke evig
 
-    * API er lettere å teste.
+        * Komponenter blir tatt over av linjen. Fordel å gjøre ting likt.
+
+    * Det er krysskoblinger i dag, så dette er ikke noe nytt.
+
+    * Fokus på API har mange fordeler
+
+        * Tydelig hva som kan gjenbrukes
+
+        * Lettere å teste maskinelt
+
+        * Lettere å plassere ansvar
 
 ----
 
