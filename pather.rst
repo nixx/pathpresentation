@@ -12,9 +12,9 @@ Mål (Øyvind)
 
     * Forståelse for utfordringen med mangel på konvensjoner på pather
 
-    * Enighet om fremgangsmåte
-
     * På sikt etablere en tydelig konvensjon som fremmer gjenbruk og lave vedlikeholdskonstnader.
+
+    * Informasjon og tilbakemelding før vi fremmer til arkitekturråd
 
 ----
 
@@ -54,7 +54,7 @@ Forslag
 
 ::
 
-    /api - I praksis JSON over HTTP
+    /api - I praksis JSON over HTTP. Ressursorientert, ikke applikasjonsorientert
     /web - Tradisjonelle webapper med en backend
     /app - Tynne JavaScript-applikasjoner som kan deployes som rene filer
 
@@ -77,8 +77,7 @@ Driftbarhet (Øyvind)
     * Forutsigbarhet for BigIP og WebSEAL-driftere
 
     * Enhetlig deploymentmodell for alle miljøer
-
-    * Vi krever en RP
+        * Alt ligger bak en reverse proxy, alltid
 
 ----
 
@@ -108,14 +107,15 @@ Sikkerhet (Øyvind)
         * Utviklingsmiljø som er fjernt fra produksjonsmiljø
         * CORS
         * Avslått sikkerhet i utvikling
-        * Kan ikke force HTTP-only eller secure på sesjonscookies
+        * Kan ikke force HTTP sikkerhetsheadere som Content-Security-Policy og Strict-Transport-Security
         * Vanskeligere å deploye web application firewall
 
 ----
 
     * Ønsker:
-        * Et utviklingsmiljø som er likt prod
-        * Mulighet til å sette headere i en reverse proxy
+        * Et utviklingsmiljø som er likt prod for å fjerne utviklingstilpasninger
+        * Mulighet til å sette sikkerhetsheadere globalt
+        * Begrense HTTP?
         * Kontrollere data som går fra ytre til sikkert nivå (WAF)
 
 ----
@@ -123,7 +123,7 @@ Sikkerhet (Øyvind)
 Hva kreves? (Øyvind)
 ====================
 
-    * Tjenesteoversikt
+    * Tjenesteoversikt (som alltid)
     * Noen må være koordinator (Webarktitekt)
 
 ----
